@@ -80,7 +80,7 @@ void loop()
 		volatile long i;
 		switch(state){
 			case Normal :
-		        digitalWrite(PIN_LED_RED, 1);
+				digitalWrite(PIN_LED_RED, 1);
 				if(digitalRead(PIN_SW) == 0){
 					for(i=0;i<LONG_CLICK;i++){
 						if(digitalRead(PIN_SW) == 1){
@@ -94,10 +94,10 @@ void loop()
 						state=Edit_h;
 					}
 				}
-		        digitalWrite(PIN_LED_RED, 0);
+				digitalWrite(PIN_LED_RED, 0);
 				break;
 			case Edit_h:
-		        digitalWrite(PIN_LED_GREEN, 1);
+				digitalWrite(PIN_LED_GREEN, 1);
 				while(1){
 					if(digitalRead(PIN_SW) == 0){
 						for(i=0;i<LONG_CLICK;i++){
@@ -118,10 +118,10 @@ void loop()
 						}
 					}
 				}
-		        digitalWrite(PIN_LED_GREEN, 0);
+				digitalWrite(PIN_LED_GREEN, 0);
 				break;
 			case Edit_m:
-		        digitalWrite(PIN_LED_BLUE, 1);
+				digitalWrite(PIN_LED_BLUE, 1);
 				while(1){
 					if(digitalRead(PIN_SW) == 0){
 						for(i=0;i<LONG_CLICK;i++){
@@ -142,7 +142,7 @@ void loop()
 						}
 					}
 				}
-		        digitalWrite(PIN_LED_BLUE, 0);
+				digitalWrite(PIN_LED_BLUE, 0);
 				break;
 			default:
 				state=Normal;
@@ -150,5 +150,3 @@ void loop()
 		}
 	}
 }
-
-
